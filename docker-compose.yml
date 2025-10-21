@@ -1,0 +1,33 @@
+services:
+  postgres:
+    container_name: postgres_YAZIDZINKY
+    image: postgres:latest
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+    ports:
+      - "22107:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./init:/docker-entrypoint-initdb.d
+    networks:
+      - pg_network
+
+  pgadmin:
+    container_name: pgadmin_YAZIDZINKY
+    image: dpage/pgadmin4:latest
+    environment:
+      PGADMIN_DEFAULT_EMAIL: ${PGADMIN_DEFAULT_EMAIL}
+      PGADMIN_DEFAULT_PASSWORD: ${PGADMIN_DEFAULT_PASSWORD}
+    ports:
+      - "44107:80"
+    depends_on:
+      - postgres
+    networks:
+      - pg_network
+
+volumes:
+  postgres_data:
+
+networks:
+  pg_network:
