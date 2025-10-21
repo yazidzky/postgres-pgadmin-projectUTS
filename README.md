@@ -114,8 +114,3 @@ DROP TABLE SALAM.test_table;
 GRANT USAGE, SELECT ON SEQUENCE SALAM.mahasiswas_id_seq TO backend_dev;
 GRANT USAGE, SELECT ON SEQUENCE SALAM.mahasiswas_id_seq TO bi_dev;
 ```
-
-
----
-
-Kalau Anda ingin versi **README dengan badge Docker, PostgreSQL, dan DBeaver**, saya bisa bantu buatkan juga.
