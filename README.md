@@ -63,9 +63,3 @@ docker exec -i postgres_YAZIDZINKY psql -U postgres < sql/02_create_users_and_gr
 docker compose down       # stop container
 docker compose down -v    # stop + hapus volume (data ikut hilang)
 ```
-
-## 📄 Lisensi
-Bebas digunakan untuk keperluan pendidikan.
-```
-
-Sesuaikan username GitHub dan nama repo lalu push.
