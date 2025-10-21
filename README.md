@@ -9,11 +9,11 @@ Penyiapan lingkungan PostgreSQL & pgAdmin4 dengan Docker Compose
 
 ## 🚀 Menjalankan layanan
 ```bash
-# clone repo (ganti URL dengan repo Anda)
+# clone repo 
 https://github.com/yazidzky/postgres-pgadmin-projectUTS.git
 
-# duplikat .env (isi ulang bila perlu)
-cp .env.example .env
+# duplikat .env
+cd .env
 
 # nyalakan
 docker compose up -d
@@ -52,10 +52,9 @@ docker exec -i postgres_YAZIDZINKY psql -U postgres < sql/02_create_users_and_gr
 ```
 .
 ├── docker-compose.yml
-├── .env.example
-├── sql/
-│   ├── 01_create_schema_and_table.sql
-│   └── 02_create_users_and_grant.sql
+├── .env
+├── init/
+│   ├── 01-init.sql
 └── README.md
 ```
 
